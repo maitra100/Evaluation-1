@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "jest": "^29.3.1"
+  },
+  "name": "evaluation-1",
+  "version": "1.0.0",
+  "main": "ScoreFinder.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maitra100/Evaluation-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maitra100/Evaluation-1/issues"
+  },
+  "homepage": "https://github.com/maitra100/Evaluation-1#readme",
+  "description": ""
+}
