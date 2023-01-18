@@ -1,3 +1,4 @@
+
 const {getScore}=require('./ScoreFinder');
 
 
@@ -7,6 +8,11 @@ describe('Calculate Score',()=>{
         expect(getScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10])).toBe(30)
         expect(getScore([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])).toBe(16)
 
+    })
+    it('should return an error when number of frames in a game is less than 10',()=>{
+        expect(()=>getScore([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3])).toThrow('Game Incomplete')
+        expect(()=>getScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])).toThrow('Game Incomplete')
+        expect(()=>getScore([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])).toThrow('Game Incomplete')
     })
 })
 
