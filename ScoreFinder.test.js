@@ -1,4 +1,5 @@
 
+
 const {getScore,getBestScore}=require('./ScoreFinder');
 
 
@@ -20,4 +21,7 @@ describe('Calculate Best Score from a set of games',()=>{
 	it('should return maximum score when a set of correct games are given',()=>{
 		expect(getBestScore([[3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10],[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])).toBe(90);
 	});
+    it('should return error when one of the games is an invalid one',()=>{
+        expect(()=>getScore([[3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10],[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])).toThrow('Game Incomplete');
+    })
 });
