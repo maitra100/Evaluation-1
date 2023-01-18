@@ -1,6 +1,6 @@
 let getScore = (nums) =>{
     let ans=0;
-    let len=nums.length
+    let len=nums.length;
     let fmeCount=0;
     let flag=0;
     for(let i=0;i<len && fmeCount<10;){
@@ -10,7 +10,7 @@ let getScore = (nums) =>{
                 flag=1;
                 break;
             }
-            fmeScore+=nums[i+1]+nums[i+2]
+            fmeScore+=nums[i+1]+nums[i+2];
             i++;
             fmeCount++;
         }
@@ -37,14 +37,14 @@ let getScore = (nums) =>{
         ans+=fmeScore;
     }
     if(fmeCount<10 || flag==1){
-        throw new Error('Game Incomplete')
+        throw new Error('Game Incomplete');
     }
     return ans;
 }
 
 let getBestScore = (game_arr)=>{
-    let scoresArray=[]
-    let len=game_arr.length
+    let scoresArray=[];
+    let len=game_arr.length;
     for(let i=0;i<len;i++){
         scoresArray.push(getScore(game_arr[i]));
     }

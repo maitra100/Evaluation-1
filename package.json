@@ -5,7 +5,6 @@
   "name": "evaluation-1",
   "version": "1.0.0",
   "main": "ScoreFinder.js",
-  "devDependencies": {},
   "scripts": {
     "test": "jest"
   },
@@ -19,5 +18,8 @@
     "url": "https://github.com/maitra100/Evaluation-1/issues"
   },
   "homepage": "https://github.com/maitra100/Evaluation-1#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.32.0"
+  }
 }
