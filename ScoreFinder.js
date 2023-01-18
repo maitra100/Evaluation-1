@@ -42,8 +42,20 @@ let getScore = (nums) =>{
     return ans;
 }
 
+let getBestScore = (game_arr)=>{
+    let scoresArray=[]
+    let len=game_arr.length
+    for(let i=0;i<len;i++){
+        scoresArray.push(getScore(game_arr[i]));
+    }
+    let max_score=max = Math.max.apply(null, scoresArray);
+    return max_score;
+}
+
 // console.log(getScore([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6,3,6]));
 // // console.log(getScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]));
 // // console.log(getScore([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
+// let twoDarr=[[3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10],[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+// console.log(getBestScore(twoDarr))
 
-module.exports= {getScore};
+module.exports= {getScore,getBestScore};
